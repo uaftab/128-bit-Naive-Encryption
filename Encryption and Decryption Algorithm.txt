@@ -1,0 +1,26 @@
+Encryption and Decryption Algorithm
+Based on the widely used AES-256 encryption implementing a XOR based transposition and multivariable shifting algorithm.
+
+Logic:
+1. Write your message in plaintext.txt. 
+2. Message is loaded into the matrix.
+3. 80-bit main key is generated through a random generator.
+4. Another 80-bit key is generated which is a variant of the original key.
+5. A transpose of the matrix is taken.
+6. Cell Elements are shifted.
+a. The original key determines which key applies to even columns and which to odd columns.
+7.  Cell Elements are  XOR with a key.
+a. Depending upon the previous step if the original key was applied to even columns. Now the original key would be applied on the odd columns. In this way both keys are applied to every cell of the matrix.
+b. False Characters are added which is again determined by the key.
+8. Encrypted text and Key are written to a file.
+9. For decryption Encrypted text and Key are loaded from the file.
+10. Key Deviants are generated. 
+11. False Characters are removed.
+12. Each cell is XOR with the key.
+13. Cell Elements are reverse shifted.
+14. Transpose of Matrix is taken. 
+15. Message is Decrypted.
+
+Result:
+Implementation of a Multivariable Bitwise Shifting & Transposition Algorithm.
+
